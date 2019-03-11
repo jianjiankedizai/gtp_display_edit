@@ -6,15 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.wangchangjian.myapplication.bar.Bar;
-import com.wangchangjian.myapplication.bar.SwipeBar;
-import com.wangchangjian.myapplication.guitar.NoteContainer;
-import com.wangchangjian.myapplication.guitar.PageDataParser;
+import com.wangchangjian.guitar_gtp.bar.Bar;
+import com.wangchangjian.guitar_gtp.bar.SwipeBar;
+import com.wangchangjian.guitar_gtp.guitar.NoteContainer;
+import com.wangchangjian.guitar_gtp.guitar.PageDataParser;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.wangchangjian.myapplication.GsonString.swepBar;
+import static com.wangchangjian.guitar_gtp.GsonString.swepBar;
 
 public class GuitarDisplayActivity extends Activity {
 

@@ -2,11 +2,11 @@ package com.wangchangjian.guitar_gtp.guitar;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.wangchangjian.myapplication.bar.PageMode;
-import com.wangchangjian.myapplication.bar.SwipeBar;
-import com.wangchangjian.myapplication.bar.note.BrokenNote;
-import com.wangchangjian.myapplication.bar.note.Note;
-import com.wangchangjian.myapplication.bar.note.SwipeNote;
+import com.wangchangjian.guitar_gtp.bar.PageMode;
+import com.wangchangjian.guitar_gtp.bar.SwipeBar;
+import com.wangchangjian.guitar_gtp.bar.note.BrokenNote;
+import com.wangchangjian.guitar_gtp.bar.note.Note;
+import com.wangchangjian.guitar_gtp.bar.note.SwipeNote;
 
 /**
  * Created by Administrator on 2018/7/18.
