@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.SizeUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.wangchangjian.myapplication.bar.Chord;
+import com.wangchangjian.guitar_gtp.bar.Chord;
 
-import static com.wangchangjian.myapplication.bar.Chord.C_CHORD;
-import static com.wangchangjian.myapplication.guitar.NoteView.LINE_NUM;
+import static com.wangchangjian.guitar_gtp.bar.Chord.C_CHORD;
+import static com.wangchangjian.guitar_gtp.guitar.NoteView.LINE_NUM;
 
 /**
  * Created by Administrator on 2018/12/25 0025.
