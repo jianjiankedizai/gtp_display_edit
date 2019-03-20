@@ -7,9 +7,30 @@ public interface GsonString {
             "            \"notes\": [\n" +
             "                {\n" +
             "                    \"name\": \"BrokenNote\",\n" +
-            "                    \"endLine\": 2,\n" +
-            "                    \"startLine\": 5,\n" +
-            "                    \"character\": 1,\n" +
+            "                    \"endLine\": 0,\n" +
+            "                    \"startLine\": 0,\n" +
+            "                    \"touchPoints\": [\n" +
+            "                        {\n" +
+            "                            \"line\": 5,\n" +
+            "                            \"character\": 1\n" +
+            "                        },\n" +
+            "                        {\n" +
+            "                            \"line\": 4,\n" +
+            "                            \"character\": 2\n" +
+            "                        },\n" +
+            "                        {\n" +
+            "                            \"line\": 2,\n" +
+            "                            \"character\": 4\n" +
+            "                        },\n" +
+            "                        {\n" +
+            "                            \"line\": 1,\n" +
+            "                            \"character\": -1\n" +
+            "                        },\n" +
+            "                        {\n" +
+            "                            \"line\": 3,\n" +
+            "                            \"character\": 3\n" +
+            "                        }\n" +
+            "                    ],\n" +
             "                    \"time\": 0.25\n" +
             "                },\n" +
             "                {\n" +

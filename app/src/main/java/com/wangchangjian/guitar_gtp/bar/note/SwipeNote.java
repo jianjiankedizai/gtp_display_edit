@@ -12,10 +12,10 @@ public class SwipeNote extends Note {
         int arrowWidth = view.getHeight() / 55;
         int pointLX = endPoint.x - arrowWidth;
         int pointRX = endPoint.x + arrowWidth;
-        int potintY;
-        if (endLine - startLine > 0) potintY = endPoint.y - arrowWidth * 4;
-        else potintY = endPoint.y + arrowWidth * 4;
-        canvas.drawLine(pointLX, potintY, endPoint.x, endPoint.y, view.getPaint());
-        canvas.drawLine(pointRX, potintY, endPoint.x, endPoint.y, view.getPaint());
+        int pointY;
+        if (endLine - startLine > 0) pointY = endPoint.y - arrowWidth * 4;
+        else pointY = endPoint.y + arrowWidth * 4;
+        canvas.drawLine(pointLX, pointY, endPoint.x, endPoint.y, view.getPaint());
+        canvas.drawLine(pointRX, pointY, endPoint.x, endPoint.y, view.getPaint());
     }
 }
