@@ -1,12 +1,10 @@
-package com.wangchangjian.guitar_gtp.guitar;
+package com.wangchangjian.guitar_gtp.guitar.noteview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.text.TextPaint;
-import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -15,18 +13,15 @@ import com.wangchangjian.guitar_gtp.bar.Bar;
 /**
  * Created by Administrator on 2018/12/25 0025.
  */
-public class NoteView extends FrameLayout {
+public class CenterView extends View {
     public static final int LINE_NUM = 6;
     private Bar bar;
     private TextView contrastTextView;
 
 
-    public NoteView(Context context) {
-        this(context, null);
-    }
-
-    public NoteView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public CenterView(Context context, Bar bar) {
+        super(context);
+        this.bar = bar;
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

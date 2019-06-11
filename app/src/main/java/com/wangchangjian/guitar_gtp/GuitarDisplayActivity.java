@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.wangchangjian.guitar_gtp.bar.Bar;
 import com.wangchangjian.guitar_gtp.bar.SwipeBar;
-import com.wangchangjian.guitar_gtp.guitar.NoteContainer;
+import com.wangchangjian.guitar_gtp.guitar.SheetPageLayout;
 import com.wangchangjian.guitar_gtp.guitar.PageDataParser;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class GuitarDisplayActivity extends Activity {
 
     private Button button_next;
     private Button button_prv;
-    private NoteContainer noteContainer;
+    private SheetPageLayout sheetPageLayout;
     private TextView tv_config;
 
     @Override
@@ -29,10 +29,10 @@ public class GuitarDisplayActivity extends Activity {
         setContentView(R.layout.activity_note_display);
         button_next = (Button) findViewById(R.id.button_next);
         button_prv = (Button) findViewById(R.id.button_prv);
-        noteContainer = (NoteContainer) findViewById(R.id.note_container);
+        sheetPageLayout = (SheetPageLayout) findViewById(R.id.note_container);
 
         tv_config = (TextView) findViewById(R.id.tv_config);
-        noteContainer.contrastTextView(tv_config);
+        sheetPageLayout.contrastTextView(tv_config);
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +46,7 @@ public class GuitarDisplayActivity extends Activity {
                     }
                     bars.add(barLines);
                 }
-                noteContainer.setBars(bars);
+                sheetPageLayout.setBars(bars);
 
             }
         });
@@ -63,7 +63,7 @@ public class GuitarDisplayActivity extends Activity {
                     }
                     bars.add(barLines);
                 }
-                noteContainer.setBars(bars);
+                sheetPageLayout.setBars(bars);
 
             }
         });

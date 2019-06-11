@@ -3,12 +3,12 @@ package com.wangchangjian.guitar_gtp.bar.note;
 import android.graphics.Canvas;
 import android.graphics.Point;
 
-import com.wangchangjian.guitar_gtp.guitar.NoteView;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 
 
 public class SwipeNote extends Note {
     @Override
-    public void drawEndPoint(Canvas canvas, Point endPoint, NoteView view) {
+    public void drawEndPoint(Canvas canvas, Point endPoint, CenterView view) {
         int arrowWidth = view.getHeight() / 55;
         int pointLX = endPoint.x - arrowWidth;
         int pointRX = endPoint.x + arrowWidth;

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.wangchangjian.guitar_gtp.guitar.NoteContainer
+            <com.wangchangjian.guitar_gtp.guitar.SheetPageLayout
                 android:id="@+id/note_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -24,9 +24,6 @@
 
     </ScrollView>
 
-    <com.wangchangjian.guitar_gtp.guitar.ChordView
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
 
     <TextView
         android:textColor="@android:color/holo_red_dark"

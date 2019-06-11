@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.wangchangjian.guitar_gtp.bar.Bar;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 
 import java.util.List;
 
@@ -17,12 +18,12 @@ import static com.wangchangjian.guitar_gtp.guitar.Constant.NOTE_HEIGHT;
 import static com.wangchangjian.guitar_gtp.guitar.Constant.NOTE_VERTICAL_PADDING;
 
 
-public class NoteContainer extends FrameLayout {
+public class SheetPageLayout extends FrameLayout {
 
     public List<List<Bar>> bars;
     private TextView textView;
 
-    public NoteContainer(Context context) {
+    public SheetPageLayout(Context context) {
         this(context, null);
     }
 
@@ -40,16 +41,15 @@ public class NoteContainer extends FrameLayout {
             List<Bar> barHors = bars.get(i);
             if (barHors == null || barHors.size() == 0) continue;
             for (int j = 0; j < barHors.size(); j++) {
-                NoteView noteView = new NoteView(getContext());
-                noteView.contrastTextView(textView);
-                noteView.setBar(barHors.get(j));
-                noteView.setTag(new Point(i, j));
-                addView(noteView);
+                CenterView centerView = new CenterView(getContext(), barHors.get(j));
+                centerView.contrastTextView(textView);
+                centerView.setTag(new Point(i, j));
+                addView(centerView);
             }
         }
     }
 
-    public NoteContainer(Context context, AttributeSet attrs) {
+    public SheetPageLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -57,6 +57,11 @@ public class NoteContainer extends FrameLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         if (bars != null) {
+            for (int i = 0; i < bars.size(); i++) {
+
+
+            }
+
             setMeasuredDimension(getMeasuredWidth(), (NOTE_HEIGHT + NOTE_VERTICAL_PADDING) * bars.size());
         }
     }

@@ -16,4 +16,7 @@ public class Chord {
     public Integer[] disableWire;
     public String chordName;
 
+    public int startPat;
+
+
 }

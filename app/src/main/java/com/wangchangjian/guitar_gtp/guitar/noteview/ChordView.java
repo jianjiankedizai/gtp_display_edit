@@ -1,4 +1,4 @@
-package com.wangchangjian.guitar_gtp.guitar;
+package com.wangchangjian.guitar_gtp.guitar.noteview;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,7 +13,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.wangchangjian.guitar_gtp.bar.Chord;
 
 import static com.wangchangjian.guitar_gtp.bar.Chord.C_CHORD;
-import static com.wangchangjian.guitar_gtp.guitar.NoteView.LINE_NUM;
+import static com.wangchangjian.guitar_gtp.guitar.noteview.CenterView.LINE_NUM;
 
 /**
  * Created by Administrator on 2018/12/25 0025.
@@ -27,21 +27,12 @@ public class ChordView extends TextView {
         this(context, null);
     }
 
-    public ChordView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ToastUtils.showShort("点击 了");
-            }
-        });
+    public ChordView(Context context, Chord chord) {
+        super(context);
         setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
         setPadding(0, SizeUtils.dp2px(2), 0, 0);
-        Chord chord = new Chord();
-        chord.rootNote = C_CHORD;
-        chord.chordName = "C";
-        chord.pressPoints = new Point[]{new Point(5, 3), new Point(4, 2), new Point(2, 1)};
-        setChord(chord);
+        this.chord = chord;
+        setText(chord.chordName);
     }
 
     @Override
@@ -62,12 +53,6 @@ public class ChordView extends TextView {
             Point pressPoint = chord.pressPoints[i];
             canvas.drawCircle(LINES_VERTICAL[pressPoint.x - 1], LINES_HORIZONTAL[pressPoint.y - 1] - vertical_padding / 2, HORIZONTAL_PADDING / 3, getPaint());
         }
-    }
-
-    public void setChord(Chord chord) {
-        this.chord = chord;
-        setText(chord.chordName);
-        invalidate();
     }
 
     private void drawSixLines(Canvas canvas) {

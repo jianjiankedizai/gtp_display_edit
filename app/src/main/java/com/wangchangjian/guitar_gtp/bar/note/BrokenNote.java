@@ -4,7 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.RectF;
 
-import com.wangchangjian.guitar_gtp.guitar.NoteView;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 import com.wangchangjian.guitar_gtp.util.UiUtils;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class BrokenNote extends Note {
     }
 
     @Override
-    public void drawEndPoint(Canvas canvas, Point endPoint, NoteView view) {
+    public void drawEndPoint(Canvas canvas, Point endPoint, CenterView view) {
         int arrowWidth = view.getHeight() / 50;
         for (int i = 0; i < touchPoints.size(); i++) {
             TouchPoint touchPoint = touchPoints.get(i);

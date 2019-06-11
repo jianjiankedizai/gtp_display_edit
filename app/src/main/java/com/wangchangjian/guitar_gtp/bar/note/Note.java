@@ -3,7 +3,7 @@ package com.wangchangjian.guitar_gtp.bar.note;
 import android.graphics.Canvas;
 import android.graphics.Point;
 
-import com.wangchangjian.guitar_gtp.guitar.NoteView;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 
 
 public abstract class Note {
@@ -20,5 +20,5 @@ public abstract class Note {
         return realTime;
     }
 
-    public abstract void drawEndPoint(Canvas canvas, Point endPoint, NoteView view);
+    public abstract void drawEndPoint(Canvas canvas, Point endPoint, CenterView view);
 }

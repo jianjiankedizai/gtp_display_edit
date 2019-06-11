@@ -7,10 +7,10 @@ import android.graphics.Point;
 import com.wangchangjian.guitar_gtp.bar.bat.Bat;
 import com.wangchangjian.guitar_gtp.bar.note.Note;
 import com.wangchangjian.guitar_gtp.guitar.Constant;
-import com.wangchangjian.guitar_gtp.guitar.NoteView;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 
 import static com.wangchangjian.guitar_gtp.guitar.Constant.DOT_RADIUS;
-import static com.wangchangjian.guitar_gtp.guitar.NoteView.linesVerticals;
+import static com.wangchangjian.guitar_gtp.guitar.noteview.CenterView.linesVerticals;
 
 /**
  * Created by Administrator on 2019/2/26 0026.
@@ -20,7 +20,7 @@ public class SwipeBar extends Bar {
 
 
     @Override
-    public void drawBatsInView(Canvas canvas, NoteView view) {
+    public void drawBatsInView(Canvas canvas, CenterView view) {
         if (bats == null) return;
         int batWidth = view.getWidth() / bats.length;
         for (int i = 0; i < bats.length; i++) {
@@ -28,7 +28,7 @@ public class SwipeBar extends Bar {
         }
     }
 
-    private void drawBat(int index, Canvas canvas, NoteView view, int batWidth) {
+    private void drawBat(int index, Canvas canvas, CenterView view, int batWidth) {
         Note[] swipeNotes = bats[index].notes;
         if (swipeNotes == null || swipeNotes.length == 0) return;
         int lineX;
@@ -45,7 +45,7 @@ public class SwipeBar extends Bar {
         }
     }
 
-    private void drawTimeLine(Canvas canvas, int lineX, int index, Note[] swipeNotes, NoteView view, int batWidth) {
+    private void drawTimeLine(Canvas canvas, int lineX, int index, Note[] swipeNotes, CenterView view, int batWidth) {
         Note rightNote = index == swipeNotes.length - 1 || swipeNotes.length == 1 ? null : swipeNotes[index + 1];
         Note currentNote = swipeNotes[index];
 

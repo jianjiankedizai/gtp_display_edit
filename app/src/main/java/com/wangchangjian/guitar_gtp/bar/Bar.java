@@ -3,7 +3,7 @@ package com.wangchangjian.guitar_gtp.bar;
 import android.graphics.Canvas;
 
 
-import com.wangchangjian.guitar_gtp.guitar.NoteView;
+import com.wangchangjian.guitar_gtp.guitar.noteview.CenterView;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ public abstract class Bar {
 
     List<Chord> chords;
 
-    public abstract void drawBatsInView(Canvas canvas, NoteView view);
+    public abstract void drawBatsInView(Canvas canvas, CenterView view);
 }
